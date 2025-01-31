@@ -10,3 +10,9 @@ function votingage(age){
     )
 }
 console.log(votingage(56));
+function positivenegative(number){
+    return(
+        number>=0?"number is positive":"number is negative"
+    );
+};
+console.log(positivenegative(-67));
