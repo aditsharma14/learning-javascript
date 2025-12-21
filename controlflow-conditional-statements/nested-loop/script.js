@@ -10,3 +10,4 @@ if(isLoggedIn){
 }else{
     userMessage="Please log in to continue.";
 }
+console.log(userMessage);
