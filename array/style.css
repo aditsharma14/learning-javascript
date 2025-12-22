@@ -1,0 +1,65 @@
+/* Global reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+	color: #1f2937;
+	padding: 2rem;
+}
+
+h1 { text-align: center; margin-bottom: 1rem; color: #0f172a; }
+h2 { margin: 1.25rem 0 0.5rem; color: #0b1220; font-size: 1.1rem; }
+
+/* Totals */
+#breakfastTotalItems, #maincourseTotalItems, #dessertTotalItems {
+	font-weight: 600;
+	color: #0b1220;
+	margin-bottom: 0.5rem;
+}
+
+/* Menu card styles (shared for each menu) */
+#breakfastMenuItems, #maincourseMenuItems, #dessertMenuItems {
+	background: #ffffff;
+	border-radius: 10px;
+	padding: 0.75rem 1rem;
+	box-shadow: 0 6px 18px rgba(12, 18, 29, 0.06);
+	display: grid;
+	gap: 0.5rem;
+	max-width: 720px;
+}
+
+#breakfastMenuItems p, #maincourseMenuItems p, #dessertMenuItems p {
+	padding: 0.5rem 0.5rem;
+	border-radius: 6px;
+	background: linear-gradient(90deg, rgba(15,23,42,0.02), rgba(15,23,42,0.00));
+	font-size: 0.98rem;
+	color: #0f172a;
+}
+
+#breakfastMenuItems p:nth-child(odd), #maincourseMenuItems p:nth-child(odd), #dessertMenuItems p:nth-child(odd) {
+	background: rgba(2,6,23,0.02);
+}
+
+/* Responsive layout: stack sections with a comfortable max width */
+body > h2 + div, body > h2 + h2 { max-width: 720px; }
+
+/* Small screens: add spacing and full width cards */
+@media (max-width: 640px) {
+	body { padding: 1rem; }
+	#breakfastMenuItems, #maincourseMenuItems, #dessertMenuItems { width: 100%; }
+	h1 { font-size: 1.4rem; }
+}
+
+/* Subtle accent for headings */
+h2::before {
+	content: '';
+	display: inline-block;
+	width: 6px;
+	height: 18px;
+	background: linear-gradient(180deg,#06b6d4,#3b82f6);
+	margin-right: 0.6rem;
+	vertical-align: middle;
+	border-radius: 3px;
+}
+
