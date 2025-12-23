@@ -1,0 +1,116 @@
+:root{
+  --bg: #f5f9ff;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --accent: #1e40af;
+  --success: #16a34a;
+  --border: #e2e8f0;
+  --radius: 8px;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(135deg, var(--bg) 0%, #eef5ff 100%);
+  color: var(--text);
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+h1{
+  font-size: 2.2rem;
+  margin: 0 0 32px 0;
+  color: var(--accent);
+  text-align: center;
+}
+
+label{
+  display: block;
+  font-weight: 600;
+  margin: 16px 0 6px 0;
+  color: var(--text);
+}
+
+input[type="number"]{
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 14px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  font-size: 1rem;
+  color: var(--text);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  margin-bottom: 18px;
+}
+
+input[type="number"]:focus{
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+}
+
+button{
+  background: var(--accent);
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.15);
+  transition: all 0.2s ease;
+}
+
+button:hover{
+  background: #1a35a0;
+  box-shadow: 0 6px 16px rgba(30, 64, 175, 0.25);
+  transform: translateY(-1px);
+}
+
+button:active{
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(30, 64, 175, 0.15);
+}
+
+#result{
+  margin-top: 24px;
+  padding: 16px 18px;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border: 1px solid #bbf7d0;
+  border-radius: var(--radius);
+  color: #166534;
+  font-size: 1.1rem;
+  font-weight: 500;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+#result:empty{
+  background: transparent;
+  border: none;
+  padding: 0;
+  min-height: 0;
+}
+
+@media (min-width: 600px){
+  body{
+    padding: 60px 20px;
+  }
+  
+  h1{
+    font-size: 2.5rem;
+  }
+  
+  input[type="number"]{
+    max-width: 450px;
+  }
+}
