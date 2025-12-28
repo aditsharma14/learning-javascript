@@ -49,7 +49,7 @@ project-folder/
 
 ## 📄 JSON Format Example
 
-```json
+````json
 {
   "articles": [
     {
@@ -65,7 +65,7 @@ project-folder/
       ]
     }
   ]
-}
+}```
 ✅ Output
 
 The page will display health articles in a card-style layout with headings and bullet points.
@@ -82,4 +82,4 @@ If you want, I can also:
 - Convert this to `fetch()` API
 - Add responsiveness or animations
 - Add search or filter functionality
-```
+````
